@@ -47,6 +47,6 @@ kubectl port-forward service/opentelemetry-collector -n opentelemetry 4318:4318
 kubectl port-forward service/tempo-distributed-query-frontend -n tempo-distributed 3100:3100
 ```
 ## Additional links
-**Tempo Metrics Generator to generate statistics about the traces/spans:\**
+**Tempo Metrics Generator to generate statistics about the traces/spans:**\
 https://grafana.com/blog/2022/05/02/new-in-grafana-tempo-1.4-introducing-the-metrics-generator
 https://grafana.com/docs/tempo/v1.5.x/metrics-generator/?pg=blog&plcmt=body-txt
