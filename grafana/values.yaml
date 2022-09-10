@@ -1,0 +1,29 @@
+useStatefulSet: true
+
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+ingress:
+  enabled: true
+  hosts:
+    - grafana.local
+
+
+persistence:
+  type: pvc
+  enabled: true
+  # storageClassName: default
+  accessModes:
+    - ReadWriteOnce
+  size: 1Gi
+
+grafana.ini:
+  feature_toggles:
+    tempoApmTable: true
+    tempoBackendSearch: true #allow full backend search
+    tempoSearch: true # allow recent search
